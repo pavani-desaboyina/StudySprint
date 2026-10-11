@@ -1,0 +1,4 @@
+**/target/
+**/studysprintdb*
+*.class
+.vscode/

@@ -1,0 +1,170 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f6fc;
+    color: #263247;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #3659d9, #7655d9);
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1 {
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 15px;
+}
+
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+.card {
+    background: white;
+    text-align: center;
+    padding: 22px 12px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.card h3 {
+    font-size: 15px;
+    color: #68748a;
+}
+
+.card p {
+    font-size: 30px;
+    font-weight: bold;
+    color: #405be0;
+    margin-top: 8px;
+}
+
+.task-form,
+.task-list {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    margin-bottom: 18px;
+    font-size: 21px;
+}
+
+#taskForm {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+input {
+    flex: 1;
+    min-width: 180px;
+    padding: 12px;
+    border: 1px solid #d8deeb;
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+button {
+    border: none;
+    border-radius: 7px;
+    padding: 12px 18px;
+    background: #405be0;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2d45bd;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 0;
+    border-bottom: 1px solid #edf0f6;
+}
+
+.task-item:last-child {
+    border-bottom: none;
+}
+
+.task-item h3 {
+    font-size: 16px;
+    overflow-wrap: anywhere;
+}
+
+.task-item p {
+    color: #68748a;
+    font-size: 13px;
+}
+
+.task-item button {
+    padding: 8px 11px;
+    white-space: nowrap;
+}
+
+.completed h3 {
+    text-decoration: line-through;
+    color: #8490a2;
+}
+
+.status {
+    font-size: 12px;
+    color: #287c53;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 22px;
+    color: #68748a;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    .summary {
+        grid-template-columns: 1fr;
+    }
+
+    #taskForm {
+        flex-direction: column;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    .task-item {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+}
